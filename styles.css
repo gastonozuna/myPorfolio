@@ -1,0 +1,724 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Clarkson',Helvetica,sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Nav */
+
+.sidenav{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    background-color: rgb(90, 90, 90);
+}
+
+.sidenav a{
+    padding: 10px 10px 10px 25px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #202020;
+    display: block;
+    transition: 0.3s;  
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.navOpen{
+    width: 40px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.fa-bars{
+    color: #313131;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navIcons{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navIcon{
+    font-size: 25px;
+}
+
+/* Switch */
+
+:root {
+    --color-1: grey;
+    --color-2: black
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 3.4rem;
+    height: 1.5rem;
+    margin: 20px 20px 20px 20px;
+}
+
+.switch_input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch_slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #181818;
+    border-radius: 1rem;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.switch_slider::before{
+    content: "";
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 1.6rem;
+    background: var(--color-1);
+    transition: transform 0.2s, with 0.2s, background 0.2s;
+}
+
+.switch_input:checked + .switch_slider{
+    background: var(--color-2);
+}
+
+.switch_input:not(:checked):active + .switch_slider::before{
+    width: 2.4rem;
+}
+
+.switch_input:checked:active + .switch_slider::before{
+    transform: translate(1rem, -50%);
+    width: 2.4rem;
+}
+
+.switch_input:checked + .switch_slider::before{
+    transform: translate(1.8rem, -50%);
+}
+
+.lineDiv{
+    width: 80%;
+    margin-left: 25px;
+    margin-top: 25px;
+    height: 2px;
+    background-color: white;
+}
+
+/* Header */
+
+.headerBox{
+    display: inline-block;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 400px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/header.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.noTitleBox{
+    width: 50%;
+    height: 100%;
+}
+
+.titleTextBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+h1{
+    color: rgba(211, 211, 211, 0.897);
+    margin-left: 40px;
+    font-size: 40px;
+}
+
+header h2{
+    color: rgba(153, 153, 153, 0.884);
+    margin: 20px 50px 40px 40px;
+    font-size: 30px;
+}
+
+/* Main */
+
+#main{
+    transition: margin-left 0.5s;
+    width: 100%;
+    height: 1000px;
+}
+
+/* About*/
+
+.aboutSection{
+    width: 100%;
+    height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    padding: 10px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.aboutBox1{
+    width: 100%;
+    padding: 20px;
+}
+
+.aboutTitle{
+    display: none;
+    margin-left: 20px;
+}
+
+.profilePic{
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-image: url('./images/profilePic.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.aboutName{
+    display: none;
+}
+
+.aboutP1{
+    display: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.aboutBox2{
+    width: 100%;
+}
+
+/* Skills */
+
+.skillsSection{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsTitle{
+    display: none;
+    margin: 20px;
+}
+
+.skillsBox1{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+
+.skillsIcon{
+    font-size: 6rem;
+    margin: 40px;
+}
+
+.skillsBox2{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skillsP1{
+    padding: 30px;
+    font-size: 1.8rem;
+}
+
+/* Form */
+
+.formBox1{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(15,19,20,1) 0%, rgba(131,143,157,1) 100%);
+    color: white;
+}
+
+.formBox2{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.contactForm{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./images/contact-background.jpg);
+    background-size: cover;
+    font-size: 1.5rem;
+    padding: 30px 60px 30px 60px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contactForm input{
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 10px;
+    background: none;
+}
+
+.contactForm textarea{
+    width: 80%;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.reqSpan{
+    color: rgb(184, 28, 28);
+}
+
+form input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgb(124, 124, 124);
+    color: white;
+    margin: 30px;
+}
+
+input[type=submit]{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+input:focus{
+    border: 1px solid rgb(19, 74, 105);
+}
+
+input:focus-visible{
+    border: white;
+    background: none;
+}
+
+.sendButton:hover{
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.493);
+    transition: 0.5s;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 200px;
+    background: rgb(119, 119, 119);
+    display: flex;
+    flex-direction: row;
+}
+
+.footerBox1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerBox2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerBox3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.footerIcon{
+    font-size: 40px;
+    padding: 10px 10px 0px 0px;
+    margin: 8px;
+    color: black;
+    transition: 0.3s;
+}
+
+.footerIcon:hover{
+    color: rgb(250, 250, 250);
+    cursor: pointer;
+}
+
+/* Media Query*/
+
+@media screen and (max-width: 1200px ) {
+
+     /* Nav */
+
+     .sidenav a{
+        font-size: 30px;
+    }
+
+    .navIcon{
+        font-size: 40px;
+    }
+
+    .navOpen{
+        padding: 20px;
+    }
+
+    .fa-bars{
+        font-size: 40px;
+    }
+
+    /* Header */
+
+    .headerBox{
+        height: 400px;
+    }
+
+    header{
+        height: 100%;
+        width: 100%;
+    }
+
+    .noTitleBox{
+        display: none;
+    }
+
+    .titleTextBox{
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 0px 20px 60px 20px;
+        padding-bottom: 40px;
+    }
+
+    h1{
+        font-size: 50px;
+        margin-top: 30px;
+    }
+
+    header h2{
+        font-size: 30px;
+        margin: 0px 0px 20px 40px;
+    }
+
+    /* About */
+
+    .aboutBox1{
+        width: 400px;
+        padding: 0;
+    }
+
+    .aboutP1{
+        display: none;
+    }
+
+    /* Skills */
+
+    .skillsSection{
+        height: 600px;
+    }
+
+    .skillsBox1{
+        width: auto;
+        height: 300px;
+        padding: 0px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .skillsP1{
+        display: flex;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Footer */
+
+    .footerIcon{
+        margin: 8px;
+    }
+
+}
+
+@media screen and (max-width: 700px ) {
+
+    /* Nav */
+
+    .sidenav a{
+        font-size: 30px;
+    }
+
+    .navIcon{
+        font-size: 40px;
+    }
+
+    /* Header */
+
+    .titleTextBox{
+        margin: 0px;
+    }
+
+    h1{
+        color: white;
+    }
+
+    header h2{
+        color: white;
+        margin-top: 10px;
+    }
+
+    /* About */
+
+    .aboutTitle{
+        font-size: 2.5rem;
+    }
+
+    .aboutSection{
+        height: 550px;
+    }
+
+    .aboutP1{
+        text-align: center;
+    }
+
+    /* Skills */
+
+    .skillsSection{
+        height: 750px;
+    }
+
+    .skillsIcon{
+        font-size: 4rem;
+        margin: 20px;
+    }
+
+    .skillsP1{
+        text-align: center;
+    }
+
+    .skillsBox1 img{
+        width: 130px;
+        height: 40px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .skillsIconBox{
+        margin: 0px;
+    }
+
+    /* Footer */
+
+    .footerIcon{
+        margin: 8px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    /* Nav */
+
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a{
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .navIcon{
+        font-size: 40px;
+    }
+
+    /* About */
+
+    .aboutSection{
+        width: 100%;
+        height: 850px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutBox1{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .profilePic{
+        display: none;
+        width: 170px;
+        height: 170px;
+        background-color: burlywood;
+        border-radius: 100px;
+        margin-top: 20px;
+    }
+
+    .aboutBox2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .aboutP1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Skills*/
+
+    .skillsSection{
+        height: 900px;
+    }
+
+    .skillsBox1{
+        height: 500px;
+        flex-direction: column;
+    }
+
+    .skillsP1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Form */
+
+    .formBox2{
+        height: 1000px;
+    }
+
+    .contactForm{
+        width: 100%;
+        height: 700px;
+    }
+
+    .contactForm div{
+        margin: 10px 0px 0px 10px;
+    }
+
+    .contactForm input{
+        margin: 10px 0px 0px 10px;
+    }
+
+    .contactForm textarea{
+        height: 200px;
+    }
+
+}
+

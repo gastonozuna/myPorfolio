@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web, developer, Front-End, dev, SASS, JQuery, Bootstap">
+    <link rel="shortcut icon" href="/images/tab_icon.png" type="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Portfolio Gaston Ozuna</title>
+</head>
+<body>
+
+<div class="bodyGrid">
+
+    
+    <!-- Nav -->
+    
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="switchBox">
+                <label class="switch">
+                    <input class="switch_input" type="checkbox" data-theme-toggle>
+                    <span class="switch_slider"></span>
+                </label>
+            </div>
+            
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            
+            <div class="lineDiv"></div>
+            
+            <div class="navIcons">
+                <a href="https://www.linkedin.com/in/gaston-ozuna-268a861b9/" target="_blank">
+                    <i class="fab fa-linkedin navIcon"></i>
+                </a>
+                <a href="https://github.com/gastonozuna" target="_blank">
+                    <i class="fab fa-github navIcon"></i>
+                </a>
+                <a href="mailto:gastonozuna11@gmail.com">
+                    <i class="far fa-envelope navIcon"></i>
+                </a>
+            </div>
+            
+        </div>
+        
+        <span onclick="openNav()"> 
+            <div class="navOpen">
+                <i class="fas fa-bars"></i>
+            </div>
+        </span>
+    </nav>
+    
+    <!-- Header -->
+    
+    <div class="headerBox">
+        <header>
+            <div class="titleTextBox">
+                <h1 class="animate__animated animate__fadeInRight animate__delay-1s">Desarrollador Web</h1>
+                <h2 class="animate__animated animate__fadeInRight animate__delay-2s">Front End Trainee</h2>
+            </div>
+            <div class="noTitleBox"></div>
+        </header>
+    </div>
+    
+    <!-- Main -->
+    
+    <div id="main">
+        
+        <!-- About -->
+        
+        <section id="about" class="aboutSection">
+            <div class="aboutBox1">
+                <h2 class="aboutTitle">About me</h2>
+                <div class="profilePic">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="aboutBox2">
+                <h3 class="aboutName">Gaston Ozuna</h3>
+                <p class="aboutP1">Desarrollador Front-End Trainee.
+                    Apasionado por la programación, particularmente orientado al desarrollo Web.
+                    Con ganas de trabajar en equipo y seguir formándome como programador hasta abarcar los conocimientos de un Full-Stack Developer.</p>
+            </div>
+        </section>
+        
+        <!-- Skills -->
+        
+        <section id="skills" class="skillsSection">
+            
+            <h2 class="skillsTitle">Skills</h2>
+            <div class="skillsBox1">
+                <div>
+                    <i class="fab fa-html5 skillsIcon"></i>
+                    <i class="fab fa-css3-alt skillsIcon"></i>
+                </div>
+                <div>
+                    <i class="fab fa-sass skillsIcon"></i>
+                    <i class="fab fa-bootstrap skillsIcon"></i>
+                </div>
+                <div>
+                    <i class="fab fa-git-alt skillsIcon"></i>
+                    <i class="fab fa-js skillsIcon"></i>
+                </div>
+                <div>
+                    <img src="./images/jquery-1-logo-png-transparent.png" style="margin-left: 20px;" alt="jquery" width="160px" height="40px">
+                </div>
+            </div>
+
+            <div class="skillsBox2">
+                <p class="skillsP1">Maquetación y edición de páginas Web con tecnologías HTML5, CSS3, SASS, Bootstap, JavaScript y JQuery</p>
+            </div>
+            
+        </section>
+
+        <!-- Form -->
+
+        <section class="formSection" id="contact">
+            <div class="formBox1">
+                <h2>Contactame</h2>
+            </div>
+            <div class="formBox2">
+                <form class="contactForm" name="contactForm" netlify>
+                    <div class="flexBox">
+                        <label for="name">Nombre</label><span class="reqSpan">*</span>
+                    </div>
+                    <input type="text" id="name" name="name" placeholder="Nombre...">
+                    
+                    <div class="flexBox">
+                        <label for="mail">Correo electronico</label><span class="reqSpan">*</span>
+                    </div>
+                    <input type="email" id="mail" name="mail" placeholder="ejemplo@correo.com">
+                    
+                    <div class="flexBox">
+                        <label for="message">Mensaje</label><span class="reqSpan">*</span>
+                    </div>
+                    <textarea id="message" name="message" placeholder="Dejame tu mensaje aqui..."></textarea>
+                    
+                    <input type="submit" class="sendButton" value="Enviar">
+                </form>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        
+        <footer>
+            <div class="footerBox1">
+            </div>
+            
+            <div class="footerBox2">
+                <i class="fas fa-angle-double-up footerIcon" id="scrollUp"></i>
+            </div>
+            
+            <div class="footerBox3">
+                <a href="https://www.linkedin.com/in/gaston-ozuna-268a861b9/" target="_blank">
+                    <i class="fab fa-linkedin footerIcon"></i>
+                </a>
+                <a href="https://github.com/gastonozuna" target="_blank">
+                    <i class="fab fa-github footerIcon"></i>
+                </a>
+                <a href="mailto:gastonozuna11@gmail.com">
+                    <i class="far fa-envelope footerIcon"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    
+    
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
